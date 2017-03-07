@@ -1,0 +1,32 @@
+#include<stdio.h>
+struct student
+{
+int roll;
+//float f;
+char grade[4][10];
+//char name[20];
+}v={.grade[0]="ishaq",.grade[1]="shaikh",.grade[2]="aamer",.grade[3]="sadik"};
+main()
+{
+struct student v1[4];
+for(inde=0;index<3;index++)
+{
+v1[index]=v;
+v1[index].roll=10;
+}
+//v.f=10.5;
+//v.grade[4][10]={"isha","shaik","aamer","rehan"};
+int index,index1;
+for(index=0;index<4;index++)
+{
+printf("%d\n",v1[index].roll);
+ for(index1=0;index1<4;index1++)
+ {
+  printf("%s\n",v1[index].grade[index1]);
+ }
+}
+/*v=&v1;
+char s1[20]="ishaque";
+v->name=(char*)s1;
+printf("%s\n",v->name);*/
+}

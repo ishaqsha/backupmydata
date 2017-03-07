@@ -1,0 +1,6 @@
+#include<stdio.h>
+extern int a;
+main()
+{
+printf("%d\n",a);
+}

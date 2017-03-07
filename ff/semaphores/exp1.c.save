@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<fcntl.h>
+#include<sys/stat.h>
+#include<semaphore.h>
+
+int main(void)
+{
+	int var
+}

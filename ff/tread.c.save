@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<pthread.h>
+#include<unistd.h>
+void *fun1()
+{
+	printf("first thread\n");
+
+}
+void  *fun2()
+{
+	printf("second thread\n");
+}
+int main()
+{
+	pthread_t t1,t2;
+	void *f1(void)
+{
+    fd1=open("myfile",O_RDONLY);
+     printf("reading the file\n");
+     read(fd1,&ch,1);
+     printf("reading the file content")
+}
+	thread_create(&t1,NULL,fun1,NULL);
+	
+}

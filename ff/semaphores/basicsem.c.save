@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<semaphore.h>
+#include<sys/types.h>
+#include<fcntl.h>
+sem_t *s;
+char buf[100];
+int main()
+{
+	pid_t pid;
+	pid=fork();
+	semopen("basicsem.c",O_CREAT);
+      FILE *fp=fopen("my1.txt","w+");
+	if(pid<0)
+	{
+		perror("fork creation failed\n");
+	}
+	else if(pid==0)
+		{
+                        while(1)
+			{
+				//printf("i am in child
+				printf("i am in child\n");
+				printf("i am printing in child s value is %d:\n",s);
+                                sleep(1);
+	     			fprintf(fp,"shaikh\n");
+				fflush(fp);
+				sem_post(&s);
+			}
+		}
+         else
+	{sem_t **
+		while(1)
+		{
+		sem_wait(&s);
+		printf("%d value of s is\n",s);
+                fread(&buf,1,100,fp);
+		printf("%s printng in parent buf by read\n",buf);
+	}
+}
+}

@@ -1,0 +1,5 @@
+#!/usr/bin/python
+print "i am shaikh"
+print "enetr a a valeo"
+a=input()
+print a

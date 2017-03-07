@@ -1,0 +1,114 @@
+1. Open an non-existing file in readonly mode and check the return value.
+Prerequisit : test.txt is not present.
+#include <fcntl.h>
+int main()
+{
+        int fd = open("test.txt" ,  O_RDONLY);
+        printf(" %d " , fd);
+}
+
+Output : -1
+Description : Unable to open file
+
+2. Open an existing file in readonly mode and check the return value.
+Prerequisit : test.txt is present.
+
+#include <fcntl.h>
+int main()
+{
+        int fd = open("test1.txt" ,  O_RDONLY);
+        printf(" %d " , fd);
+}
+Output : 3 (>= 3)
+Description : File opened successfully.
+
+3. Open an non-existing file in writeonly mode and check the return value.
+Prerequisit : writetest.txt is not present.
+
+#include <fcntl.h>
+int main()
+{
+        int fd = open("writetest.txt" ,  O_WRONLY);
+        printf(" %d " , fd);
+}
+Output : -1
+Description : Opening in write mode does not create a new file if file is not existing.
+
+
+
+4. Open an existing file in writeonly mode and check the return value.
+Prerequisit : writetest.txt is present.
+
+#include <fcntl.h>
+int main()
+{
+        int fd = open("writetest.txt" ,  O_WRONLY);
+        printf(" %d " , fd);
+}
+Output : 3 (>= 3)
+Description : File opened successfully.
+
+5. Check if the existing data in file is deleted or not.
+Answer : Existing data is not deleted.
+
+
+6. What happens if we write data, will it append or overwrite.
+Answer : overwrite
+
+Program : 
+#include <fcntl.h>
+int main()
+{
+        int fd;
+
+        fd = open("writetest.txt" ,  O_WRONLY);
+        write(fd , "Hello",6);
+        printf(" %d " , fd);
+}
+
+Existing Data in File : CRANES VARSITY
+New Data : HelloS VARSITY
+
+-------------------------------------------------------------
+
+1. How to create a new file, if it does not exits.
+#include <fcntl.h>
+int main()
+{
+        int fd;
+
+        fd = open("writetest.txt" ,  O_WRONLY | O_CREAT);
+        write(fd , "Hello",6);
+        printf(" %d " , fd);
+}
+
+If file is not present, it will create. 
+If file already present, it will retain the data.
+Existing Data in File : CRANES VARSITY
+New Data : HelloS VARSITY
+
+2. How to add(append) data at the end of file.
+#include <fcntl.h>
+int main()
+{
+        int fd;
+
+        fd = open("test1.txt" ,  O_WRONLY | O_APPEND);
+        write(fd , "DOMLUR",6);
+        printf(" %d " , fd);
+}
+
+3. How to truncate the contents of file.
+#include <fcntl.h>
+int main(int argc,char *argv[])
+{
+        int fd;
+        if(argc == 2)
+        {
+        fd = open(argv[1] ,  O_WRONLY | O_TRUNC);
+        printf(" %d " , fd);
+        }
+
+}
+
+

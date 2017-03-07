@@ -1,0 +1,7 @@
+*include<stdio.h>
+int poe(int,int);
+main()
+{
+ int result,base,exp;
+printf("enter the base and exponenet");
+scanf("%d%d",)

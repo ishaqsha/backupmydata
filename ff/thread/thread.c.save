@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<pthread.h>
+int v1=10;
+void *thread1(void *arg)
+{
+int v;
+v=*(int *)arg;
+
+v1=v1+10;
+printf(" thread 1 v1  value of a is %d\n",v1);
+printf("i amin thread1\n");
+}
+void *thread2(void *arg)
+{
+printf("i am in thread 2 %s\n",(char *)arg);
+v1=v1-10;
+printf(" i am printing thread 2 value %d\n",v1);
+printf("i amin thread2\n");
+}
+
+int main()
+{
+        int a=10;
+	pthread_t tid1,tid2;
+	//pthread_t tid2;
+	pthread_create(&tid1,NULL,thread1,(void *)&a);
+        pthread_create(&tid2,NULL,thread2,(void *)"i am shaikh");
+        pthread_join(tid1,NULL);
+	pthread_join(tid2,NULL);
+}

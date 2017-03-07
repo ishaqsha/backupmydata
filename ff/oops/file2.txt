@@ -1,0 +1,4 @@
+This is file2 text line 1
+This is file2 text line 2
+A sample text file
+Last line file2 text

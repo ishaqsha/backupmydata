@@ -1,0 +1,23 @@
+int open(const char *pathname, int flags, mode_t mode);
+
+Benefits of closing the file 
+
+#include <fcntl.h>
+void func1();
+int main()
+{
+        func1();
+        func1();
+}
+
+void func1()
+{
+        int fd;
+        fd = open("test1.txt" ,  O_WRONLY);
+        write(fd , "Hello",6);
+        printf(" %d " , fd);
+	close(fd); //Try disabling / enabing this statement
+}
+
+without close : 3 , 4
+with close : 3 , 3

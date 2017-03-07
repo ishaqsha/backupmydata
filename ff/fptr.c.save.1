@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+char s1[20]="shaikh";
+char *f(char **p)
+{
+//p=malloc(20*sizeof(char));
+//printf("enter the string");
+//scanf("%s",p);
+*p=(char*)&s1;
+printf("%s\n",*p);
+return p;
+}
+main()
+{
+int a=10
+int *p=&a;
+printf("p %p\n",p);
+printf("&p %p\n",&p); 
+f(&p);
+printf("%s",p);
+}
+
+

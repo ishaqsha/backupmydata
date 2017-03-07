@@ -1,0 +1,46 @@
+#include<stdio.h>
+pthread_mutex_t m1;
+pthread_mutex_t m2;
+pthread_mutex_t m3;
+void *f1(void)
+{
+    fd1=open("myfile",O_RDONLY);
+     printf("reading the file\n");
+     read(fd1,&ch,1);
+     printf("reading the file content")
+}
+void *f2(void)
+{
+    fd1=open("myfile",O_RDONLY);
+     printf("reading the file\n");
+     read(fd1,&ch,1);
+     printf("reading the file content")
+}
+void *f3(void)
+{
+    fd1=open("myfile",O_RDONLY);
+     printf("reading the file\n");
+     read(fd1,&ch,1);
+     printf("reading the file content")
+}
+ int main()
+{
+int fd,fd1;
+char ch;
+   pid_t pid,pid1;
+   pid=fork()
+   if(pid<0)
+   {
+     perror("thread creation failed\n");
+   }
+  else if(pid==0)
+{
+	while(1) 
+                  
+{
+      pthread_t tid1,tid2,tid3
+      pthread_creat(&tid1,NULL,f1,NULL);
+      pthread_creat(&tid2,NULL,f2,NULL);
+      pthread_creat(&tid3,NULL,f3,NULL);
+}
+}
