@@ -1,0 +1,1 @@
+cmd_/home/ishaqsha/jsk_drivers/simple_usb/mouse_custom.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ishaqsha/jsk_drivers/simple_usb/mouse_custom.ko /home/ishaqsha/jsk_drivers/simple_usb/mouse_custom.o /home/ishaqsha/jsk_drivers/simple_usb/mouse_custom.mod.o ;  true

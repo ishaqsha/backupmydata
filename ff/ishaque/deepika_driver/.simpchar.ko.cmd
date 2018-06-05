@@ -1,0 +1,1 @@
+cmd_/home/ishaqsha/deepika_driver/simpchar.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ishaqsha/deepika_driver/simpchar.ko /home/ishaqsha/deepika_driver/simpchar.o /home/ishaqsha/deepika_driver/simpchar.mod.o ;  true

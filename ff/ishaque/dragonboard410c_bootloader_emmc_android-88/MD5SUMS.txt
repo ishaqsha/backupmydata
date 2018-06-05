@@ -1,0 +1,9 @@
+bca13b60c2f64719c84a96d755b55cb0  emmc_appsboot.mbn
+aeb19f8e18279831c2fe66c22fa79e24  flashall
+79d01a168612abce66ecab58b397c8ae  gpt_both0.bin
+1492b630bbd4b5e93313a568d4ac1f60  hyp.mbn
+c09af6bc68c68f92e6a711634ee5cb14  license.txt
+e03ef4f31fdbbd939526371a817f84d5  NON-HLOS.bin
+7c4e207df9ef2c5ee0a649313d38916a  rpm.mbn
+6a9556a3f7c4ac793dcd7f6fbd110ba8  sbl1.mbn
+aef2d23e9c6b9216747df343ec00fb8e  tz.mbn

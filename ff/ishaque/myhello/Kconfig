@@ -1,0 +1,3 @@
+config myhello
+
+	tristate  "my_hello_driver"

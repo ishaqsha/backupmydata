@@ -1,0 +1,1 @@
+cmd_drivers/myhello/hikernel.ko := aarch64-linux-gnu-ld -EL -r  -maarch64linux -T ./scripts/module-common.lds -T ./arch/arm64/kernel/module.lds --build-id  -o drivers/myhello/hikernel.ko drivers/myhello/hikernel.o drivers/myhello/hikernel.mod.o ;  true
