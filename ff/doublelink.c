@@ -8,7 +8,7 @@ struct student *prev;
 }Node;
 Node *add(Node *);
 void display(Node *);
-main()
+int main()
 {
            int num;
            Node *head;
@@ -43,6 +43,7 @@ Node *add(Node *head)
            }
            else
            {
+		temp=head;
                  while(temp->link)
                  { 
                        temp=temp->link;
@@ -65,6 +66,6 @@ void display(Node *head)
                    temp=temp->link;
                   }
 }
-Node *reverse(Node *head)
+/*Node *reverse(Node *head)
 {
-Node *temp1=head
+Node *temp1=head*/
